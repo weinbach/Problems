@@ -6,7 +6,7 @@ import java.util.Queue;
 //#1379 Find a Corresponding Node of a Binary Tree in a Clone of That Tree
 public class FindNodeInClonedBt {
 
-    public static final TreeNode getTargetCopy(final TreeNode original, final TreeNode cloned, final TreeNode target) {
+    public static TreeNode getTargetCopy(final TreeNode original, final TreeNode cloned, final TreeNode target) {
 
         Queue<TreeNode> queue = new LinkedList<>();
         if (original != null)
