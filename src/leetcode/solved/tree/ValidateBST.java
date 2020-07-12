@@ -6,23 +6,23 @@ import java.util.Stack;
 public class ValidateBST {
     //#98 Validate Binary Search Tree
     public static void main(String[] args) {
-        TreeNode node = new TreeNode(-2147483648);
+        TreeNodeJava node = new TreeNodeJava(-2147483648);
         //node.left = new TreeNode(1);
         System.out.println(isValidBST(node) + " min:" + Integer.MIN_VALUE);
     }
 
-    public static boolean isValidBST(TreeNode root) {
+    public static boolean isValidBST(TreeNodeJava root) {
 
         if (root == null)
             return true;
         boolean anyLeftNodes = false;
-        Stack<TreeNode> stack = new Stack<>();
-        HashSet<TreeNode> set = new HashSet<>();
+        Stack<TreeNodeJava> stack = new Stack<>();
+        HashSet<TreeNodeJava> set = new HashSet<>();
         stack.push(root);
         int prevValue = Integer.MIN_VALUE;
 
         while (!stack.empty()) {
-            TreeNode node = stack.peek();
+            TreeNodeJava node = stack.peek();
             if (set.contains(node)) {
                 node = stack.pop();
 

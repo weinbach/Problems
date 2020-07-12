@@ -6,15 +6,15 @@ import java.util.Queue;
 public class MaximumDepthOfBinaryTree {
     //#104 Maximum Depths of Binary Tree
     public static void main(String[] args) {
-        TreeNode tree = new TreeNode(1);
-        tree.right = new TreeNode(2);
+        TreeNodeJava tree = new TreeNodeJava(1);
+        tree.right = new TreeNodeJava(2);
         System.out.println("res: " + maxDepth(tree));
     }
 
-    public static int maxDepth(TreeNode root) {
+    public static int maxDepth(TreeNodeJava root) {
         if(root==null)
             return 0;
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<TreeNodeJava> queue = new LinkedList<>();
         queue.add(root);
 
         int depth = 0;
@@ -25,7 +25,7 @@ public class MaximumDepthOfBinaryTree {
             depth++;
 
             for(int i=0;i<layerSpace;i++){
-                TreeNode node = queue.poll();
+                TreeNodeJava node = queue.poll();
                 if(node!=null){
                     if(node.left!=null){
                         queue.add(node.left);

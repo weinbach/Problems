@@ -9,14 +9,14 @@ public class BTInorderTraversal {
     //#94 Binary Tree Inorder Traversal
 
     public static void main(String[] args) {
-        TreeNode tree = new TreeNode(1);
-        tree.right = new TreeNode(2);
-        tree.right.left = new TreeNode(3);
+        TreeNodeJava tree = new TreeNodeJava(1);
+        tree.right = new TreeNodeJava(2);
+        tree.right.left = new TreeNodeJava(3);
 
         inorderTraversalIterative2(tree);
     }
 
-    public static List<Integer> inorderTraversalRec(TreeNode root) {
+    public static List<Integer> inorderTraversalRec(TreeNodeJava root) {
         List<Integer> res = new LinkedList<>();
         if (root == null)
             return res;
@@ -26,16 +26,16 @@ public class BTInorderTraversal {
         return res;
     }
 
-    public static List<Integer> inorderTraversalIterative(TreeNode root) {
+    public static List<Integer> inorderTraversalIterative(TreeNodeJava root) {
         List<Integer> res = new LinkedList<>();
         if (root == null)
             return res;
-        Stack<TreeNode> stack = new Stack<>();
-        HashSet<TreeNode> set = new HashSet<>();
+        Stack<TreeNodeJava> stack = new Stack<>();
+        HashSet<TreeNodeJava> set = new HashSet<>();
         stack.push(root);
 
         while (!stack.empty()) {
-            TreeNode node = stack.peek();
+            TreeNodeJava node = stack.peek();
             if (set.contains(node)) {
                 node = stack.pop();
                 res.add(node.val);
@@ -58,10 +58,10 @@ public class BTInorderTraversal {
         return res;
     }
 
-    public static List<Integer> inorderTraversalIterative2(TreeNode root) {
+    public static List<Integer> inorderTraversalIterative2(TreeNodeJava root) {
         List<Integer> res = new LinkedList<>();
-        Stack<TreeNode> stack = new Stack<>();
-        TreeNode curr = root;
+        Stack<TreeNodeJava> stack = new Stack<>();
+        TreeNodeJava curr = root;
 
         do {
             while (curr!=null){

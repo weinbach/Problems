@@ -3,22 +3,22 @@ package leetcode.solved.tree;
 public class CountCompleteTreeNodes {
     //#222 Count Complete Tree Nodes
     public static void main(String[] args) {
-        TreeNode node = new TreeNode(1);
-        node.left = new TreeNode(2);
-        node.right = new TreeNode(3);
-        node.left.left = new TreeNode(4);
-        node.left.right = new TreeNode(5);
-        node.right.left = new TreeNode(6);
+        TreeNodeJava node = new TreeNodeJava(1);
+        node.left = new TreeNodeJava(2);
+        node.right = new TreeNodeJava(3);
+        node.left.left = new TreeNodeJava(4);
+        node.left.right = new TreeNodeJava(5);
+        node.right.left = new TreeNodeJava(6);
 
         countNodes(node);
     }
 
-    public static int countNodes(TreeNode root) {
+    public static int countNodes(TreeNodeJava root) {
         if(root==null)
             return 0;
 
         int levels = 0;
-        TreeNode iterative = root;
+        TreeNodeJava iterative = root;
         while(iterative.left!=null){
             levels++;
             iterative = iterative.left;
@@ -34,7 +34,7 @@ public class CountCompleteTreeNodes {
                 loss++;
                 break;
             }
-            TreeNode currRoot = iterative;
+            TreeNodeJava currRoot = iterative;
 
             if (levels > 1) {
                 iterative = iterative.right;

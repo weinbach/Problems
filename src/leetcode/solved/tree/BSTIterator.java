@@ -5,9 +5,9 @@ public class BSTIterator {
 
     class BSTIteratorInner {
 
-        TreeNode root;
+        TreeNodeJava root;
 
-        public BSTIteratorInner(TreeNode root) {
+        public BSTIteratorInner(TreeNodeJava root) {
             this.root = root;
         }
 

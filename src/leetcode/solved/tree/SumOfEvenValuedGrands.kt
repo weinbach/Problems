@@ -3,13 +3,13 @@ package leetcode.solved.tree
 import java.util.*
 
 //1315. Sum of Nodes with Even-Valued Grandparent
-class TreeNodeKt(var `val`: Int) {
-    var left: TreeNodeKt? = null
-    var right: TreeNodeKt? = null
+class TreeNode(var `val`: Int) {
+    var left: TreeNode? = null
+    var right: TreeNode? = null
 }
 
-fun sumEvenGrandparent(root: TreeNodeKt?): Int {
-    val queue = LinkedList<TreeNodeKt>()
+fun sumEvenGrandparent(root: TreeNode?): Int {
+    val queue = LinkedList<TreeNode>()
     if (root == null)
         return 0;
 
@@ -17,7 +17,7 @@ fun sumEvenGrandparent(root: TreeNodeKt?): Int {
     queue.push(root)
 
     while (!queue.isEmpty()) {
-        val node: TreeNodeKt = queue.pop()
+        val node: TreeNode = queue.pop()
         if (node.`val` % 2 == 0) {
             if(node.left!=null){
                 queue.push(node.left)
@@ -45,11 +45,11 @@ fun sumEvenGrandparent(root: TreeNodeKt?): Int {
 }
 
 fun main(){
-    val node = TreeNodeKt(61)
-    node.left = TreeNodeKt(13)
-    node.right = TreeNodeKt(46)
-    node.right!!.right = TreeNodeKt(56)
-    node.right!!.right!!.left = TreeNodeKt(72)
+    val node = TreeNode(61)
+    node.left = TreeNode(13)
+    node.right = TreeNode(46)
+    node.right!!.right = TreeNode(56)
+    node.right!!.right!!.left = TreeNode(72)
 
     print(sumEvenGrandparent(node))
 }

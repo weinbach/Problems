@@ -8,18 +8,18 @@ import java.util.Stack;
 public class BTPostorderTraversal {
     //#145 Binary Tree Postorder Traversal
 
-    public List<Integer> postorderTraversal(TreeNode root) {
+    public List<Integer> postorderTraversal(TreeNodeJava root) {
 
         List<Integer> res = new LinkedList<>();
         if (root == null)
             return res;
 
-        Stack<TreeNode> stack = new Stack<>();
-        HashSet<TreeNode> set = new HashSet<>();
+        Stack<TreeNodeJava> stack = new Stack<>();
+        HashSet<TreeNodeJava> set = new HashSet<>();
         stack.push(root);
 
         while (!stack.empty()) {
-            TreeNode node = stack.peek();
+            TreeNodeJava node = stack.peek();
 
             if (node.left != null && !set.contains(node.left)) {
                 stack.add(node.left);

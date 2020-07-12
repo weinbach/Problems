@@ -7,20 +7,20 @@ import java.util.Queue;
 public class BTLevelOrderTraversalTwo {
     //#107 Binary Tree Level Order Traversal II
     public static void main(String[] args) {
-        TreeNode node = new TreeNode(3);
-        node.left = new TreeNode(9);
-        node.right = new TreeNode(20);
-        node.right.left = new TreeNode(15);
-        node.right.right = new TreeNode(7);
+        TreeNodeJava node = new TreeNodeJava(3);
+        node.left = new TreeNodeJava(9);
+        node.right = new TreeNodeJava(20);
+        node.right.left = new TreeNodeJava(15);
+        node.right.right = new TreeNodeJava(7);
 
         levelOrderBottom(node);
     }
 
-    public static List<List<Integer>> levelOrderBottom(TreeNode root) {
+    public static List<List<Integer>> levelOrderBottom(TreeNodeJava root) {
         LinkedList<List<Integer>> res = new LinkedList<>();
         if(root==null)
             return res;
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<TreeNodeJava> queue = new LinkedList<>();
         queue.add(root);
 
         int lvlElements = 1;
@@ -28,7 +28,7 @@ public class BTLevelOrderTraversalTwo {
             int nextLvlElements = 0;
             List<Integer> list = new LinkedList<>();
             for(int i=0;i<lvlElements;i++){
-                TreeNode node = queue.poll();
+                TreeNodeJava node = queue.poll();
                 list.add(node.val);
                 if(node.left!=null){
                     queue.add(node.left);

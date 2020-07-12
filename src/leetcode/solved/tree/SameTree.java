@@ -1,11 +1,11 @@
 package leetcode.solved.tree;
 
-class TreeNode {
+class TreeNodeJava {
     int val;
-    TreeNode left;
-    TreeNode right;
+    TreeNodeJava left;
+    TreeNodeJava right;
 
-    TreeNode(int x) {
+    TreeNodeJava(int x) {
         val = x;
     }
 }
@@ -14,12 +14,12 @@ public class SameTree {
     //#100 Same Tree
 
     public static void main(String[] args) {
-        TreeNode asd = null;
-        TreeNode ww = new TreeNode(2);
+        TreeNodeJava asd = null;
+        TreeNodeJava ww = new TreeNodeJava(2);
         System.out.println(asd == ww);
     }
 
-    public boolean isSameTree(TreeNode p, TreeNode q) {
+    public boolean isSameTree(TreeNodeJava p, TreeNodeJava q) {
         if (p != null && q != null) {
             if (p.val == q.val) {
                 if (isSameTree(p.left, q.left))
