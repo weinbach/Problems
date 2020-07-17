@@ -1,7 +1,6 @@
 package leetcode.solved.tree
 
 import java.util.*
-import kotlin.collections.ArrayList
 
 //654. Maximum Binary Tree
 fun constructMaximumBinaryTree(nums: IntArray): TreeNode? {
