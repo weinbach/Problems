@@ -57,7 +57,7 @@ fun recTreeCreator(start: Int, end: Int): ArrayList<TreeNode> {
     return list
 
 }
-private fun treeCopy(tree: TreeNode): TreeNode {
+fun treeCopy(tree: TreeNode): TreeNode {
     val copyHead = TreeNode(tree.`val`)
 
     val stack = Stack<TreeNode>()

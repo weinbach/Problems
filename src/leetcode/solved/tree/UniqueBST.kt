@@ -28,6 +28,6 @@ fun calculateTees(n: Int, memo:Array<Int?>): Int {
 }
 
 fun main(){
-    print(numTrees(5))
+    print(numTrees(4))
 }
 
