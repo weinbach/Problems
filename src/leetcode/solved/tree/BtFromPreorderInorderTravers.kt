@@ -1,7 +1,7 @@
 package leetcode.solved.tree
 
 //105. Construct Binary Tree from Preorder and Inorder Traversal
-fun buildTree(preorder: IntArray, inorder: IntArray): TreeNode? {
+private fun buildTree(preorder: IntArray, inorder: IntArray): TreeNode? {
     if (preorder.isEmpty())
         return null
     if (preorder.size == 1)
