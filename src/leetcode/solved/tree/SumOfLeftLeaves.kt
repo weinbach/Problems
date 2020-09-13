@@ -3,6 +3,8 @@ package leetcode.solved.tree
 import java.util.*
 
 //404. Sum of Left Leaves
+//Runtime: 148 ms, faster than 92.35%
+//Memory Usage: 32.8 MB, less than 55.88%
 fun sumOfLeftLeaves(root: TreeNode?): Int {
     if (root==null)
         return 0
