@@ -1,4 +1,4 @@
-package leetcode.solved;
+package leetcode.solved.hashTable;
 
 import java.util.HashMap;
 import java.util.Hashtable;
