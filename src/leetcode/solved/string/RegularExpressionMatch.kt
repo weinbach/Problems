@@ -1,13 +1,13 @@
 package leetcode.solved.string
 
 //10. Regular Expression Matching
-fun isMatch(s: String, p: String): Boolean {
+private fun isMatch(s: String, p: String): Boolean {
     if (s.isEmpty() && p.isEmpty())
         return true
     return check(0, 0, s, p)
 }
 
-fun check(indexS: Int, indexP: Int, s: String, p: String): Boolean {
+private fun check(indexS: Int, indexP: Int, s: String, p: String): Boolean {
 
     if (indexP == p.lastIndex + 1 && indexS == s.lastIndex + 1)
         return true

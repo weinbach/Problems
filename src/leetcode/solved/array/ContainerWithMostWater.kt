@@ -17,6 +17,8 @@ fun maxArea(height: IntArray): Int {
     return maxArea
 }
 
+
+
 fun main(){
     print(maxArea(intArrayOf(1,8,6,2,5,4,8,3,7)))
 }
