@@ -1,4 +1,4 @@
-package leetcode.solved.array
+package leetcode.solved.dp
 
 //62. Unique Paths
 //Runtime: 144 ms, faster than 35.11%
@@ -29,7 +29,7 @@ private fun findPaths(m: Int, n: Int, memo: Array<IntArray>): Int {
         }
     }
     memo[m-1][n-1] = count
-    if(n-1<height && m-1<width)
+    if(n-1< height && m-1< width)
         memo[n-1][m-1] = count
     return count
 }
