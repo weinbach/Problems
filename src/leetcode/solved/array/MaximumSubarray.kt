@@ -2,7 +2,7 @@ package leetcode.solved.array
 
 //53.  Maximum Subarray
 //Runtime: 244 ms, faster than 19.93%
-//Memory Usage: 39.6 MB, less than 15.20% 
+//Memory Usage: 39.6 MB, less than 15.20%
 fun maxSubArray(nums: IntArray): Int {
 
     var maxSum = nums[0]
