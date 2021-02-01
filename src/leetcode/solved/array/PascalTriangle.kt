@@ -2,7 +2,7 @@ package leetcode.solved.array
 
 //118. Pascal's Triangle
 //Runtime: 156 ms, faster than 58.67%
-//Memory Usage: 35.7 MB, less than 22.67% 
+//Memory Usage: 35.7 MB, less than 22.67%
 fun generate(numRows: Int): List<List<Int>> {
     val arr = ArrayList<List<Int>>()
     if(numRows>0)
