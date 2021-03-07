@@ -6,7 +6,7 @@ import sorts.quickSortCustom
 //Memory Usage: 35.3 MB, less than 44.74%
 
 //31. Next Permutation
-fun nextPermutation(nums: IntArray): Unit {
+private fun nextPermutation(nums: IntArray): Unit {
 
     val hashMap = HashMap<Int, Int>()
 
@@ -47,7 +47,7 @@ fun nextPermutation(nums: IntArray): Unit {
         quickSortCustom(nums, 0, nums.size-1)
 }
 
-fun swap(array: IntArray, indexOne: Int, indexTwo: Int){
+private fun swap(array: IntArray, indexOne: Int, indexTwo: Int){
     val temp = array[indexOne]
     array[indexOne] = array[indexTwo]
     array[indexTwo] = temp
