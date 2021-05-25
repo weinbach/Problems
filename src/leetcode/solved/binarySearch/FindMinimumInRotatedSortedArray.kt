@@ -3,7 +3,7 @@ package leetcode.solved.binarySearch
 // 153. Find Minimum in Rotated Sorted Array
 // Runtime: 196 ms, faster than 9.71%
 // Memory Usage: 37.5 MB, less than 25.24%
-fun findMin(nums: IntArray): Int {
+private fun findMin(nums: IntArray): Int {
     if(nums[0]<=nums.last())
         return nums[0]
     if(nums.size==2)
@@ -12,7 +12,7 @@ fun findMin(nums: IntArray): Int {
     return search(0, nums.lastIndex, nums)
 }
 
-fun search(start: Int, end: Int, nums: IntArray): Int{
+private fun search(start: Int, end: Int, nums: IntArray): Int{
     if(end<start)
         return -1
     val middle = (end+start+1)/2
