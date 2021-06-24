@@ -1,6 +1,6 @@
 package sorts
 
-fun mergeSort(array: IntArray){
+private fun mergseSort(array: IntArray){
     mergeSort(0, array.size-1, array, IntArray(array.size))
 }
 
@@ -49,6 +49,6 @@ fun mergeHalves(leftStart: Int, rightEnd: Int, array: IntArray, tempArray: IntAr
 
 fun main(){
     val array = intArrayOf(9,2,7,3,5,0,-1,248,15,12,13,1,1,9)
-    mergeSort(array)
+    //mergeSort(array)
      array
 }
