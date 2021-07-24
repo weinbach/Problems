@@ -1,4 +1,4 @@
-package codesignal
+package implementations
 
 // Knuth shuffle
 // produces uniformly random permutation
