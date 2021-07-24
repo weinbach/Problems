@@ -59,7 +59,6 @@ public class CustomStackArray<Item> implements Iterable<Item>{
     }
 
     public static boolean less(Comparable v, Comparable w){
-        Comparable[] asd = new Comparable[2];
         return v.compareTo(w) < 0;
     }
 }
