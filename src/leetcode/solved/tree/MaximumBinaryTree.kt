@@ -7,7 +7,7 @@ fun constructMaximumBinaryTree(nums: IntArray): TreeNode? {
     if(nums.size==1)
         return TreeNode(nums[0])
 
-    val maxNum = nums.max()!!
+    val maxNum = nums.maxOrNull()!!
     val maxNumIndex = nums.indexOf(maxNum)
     val node = TreeNode(maxNum)
 
