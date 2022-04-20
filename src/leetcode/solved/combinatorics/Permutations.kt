@@ -1,4 +1,4 @@
-package leetcode.solved.array
+package leetcode.solved.combinatorics
 
 //46. Permutations
 // Runtime: 232 ms, faster than 28.82%

@@ -1,4 +1,4 @@
-package leetcode.solved.array
+package leetcode.solved.combinatorics
 
 import java.util.LinkedList
 
